@@ -1,0 +1,44 @@
+﻿<Window x:Class="Calendar.EventFormWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calendar"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+
+        mc:Ignorable="d"
+        Title="Event Form" Height="450" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text="Event Title:"/>
+            <TextBox x:Name="txtTitle" Width="200" Margin="0 5" Text="{Binding NewEvent.Title}" />
+
+            <TextBlock Text="Event Description:"/>
+            <TextBox x:Name="txtDescription" Width="200" Height="100" Margin="0 5" Text="{Binding NewEvent.Description}"/>
+
+            <TextBlock Text="Start Date:"/>
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <DatePicker x:Name="datePickerStart" Width="120" SelectedDate="{Binding NewEvent.StartDate}" Margin="0 0 5 0"/>
+                <ComboBox x:Name="cmbStartHours" Width="60" Margin="0 0 5 0"/>
+                <ComboBox x:Name="cmbStartMinutes" Width="60" Margin="0 0 5 0"/>
+            </StackPanel>
+            
+            <TextBlock Text="End Date:"/>
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <DatePicker x:Name="datePickerEnd" Width="120" SelectedDate="{Binding NewEvent.EndDate}" Margin="0 0 5 0"/>
+                <ComboBox x:Name="cmbEndHours" Width="60"  Margin="0 0 5 0"/>
+                <ComboBox x:Name="cmbEndMinutes" Width="60"  Margin="0 0 5 0"/>
+            </StackPanel>
+            
+            <CheckBox x:Name="chkNotification" Content="Notification" Margin="0 5" IsChecked="{Binding NewEvent.Notification}"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10">
+                <Button x:Name="saveButton" Content="Save" Click="SaveButton_Click" Margin="10"/>
+                <Button x:Name="cancelButton" Content="Cancel" Click="CancelButton_Click" Margin="10"/>
+            </StackPanel>
+            
+        </StackPanel>
+        
+    </Grid>
+    
+</Window>
