@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace Calendar
+namespace Calendar.Models
 {
 
-    public class Event
+    public class EventModel
     {
 
         public int ID { get; set; }

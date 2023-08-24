@@ -4,12 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calendar"
-        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
-
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:viewmodels="clr-namespace:Calendar.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:EventFormViewModel}"
         mc:Ignorable="d"
         Title="Event Form" Height="450" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
+        
         <StackPanel Margin="20">
+            
             <TextBlock Text="Event Title:"/>
             <TextBox x:Name="txtTitle" Width="200" Margin="0 5" Text="{Binding NewEvent.Title}" />
 
@@ -29,12 +30,12 @@
                 <ComboBox x:Name="cmbEndHours" Width="60"  Margin="0 0 5 0"/>
                 <ComboBox x:Name="cmbEndMinutes" Width="60"  Margin="0 0 5 0"/>
             </StackPanel>
-            
+
             <CheckBox x:Name="chkNotification" Content="Notification" Margin="0 5" IsChecked="{Binding NewEvent.Notification}"/>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10">
-                <Button x:Name="saveButton" Content="Save" Click="SaveButton_Click" Margin="10"/>
-                <Button x:Name="cancelButton" Content="Cancel" Click="CancelButton_Click" Margin="10"/>
+                <Button x:Name="saveButton" Content="Save" Command="{Binding SaveCommand}" Margin="10"/>
+                <Button x:Name="cancelButton" Content="Cancel" Command="{Binding CancelCommand}" Margin="10"/>
             </StackPanel>
             
         </StackPanel>

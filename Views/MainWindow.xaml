@@ -6,8 +6,11 @@
         xmlns:local="clr-namespace:Calendar"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="500" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+
     <Viewbox>
-        <Calendar x:Name="appCalendar"   Foreground="White" DisplayMode="Month" MouseDoubleClick="Calendar_MouseDoubleClick">
+
+        <Calendar x:Name="appCalendar" Foreground="White" DisplayMode="Month" SelectedDate="{Binding SelectedDate}">
+
             <Calendar.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFA3AEB9"/>
@@ -16,6 +19,7 @@
                     <GradientStop Color="#FF0C6EB7" Offset="1"/>
                 </LinearGradientBrush>
             </Calendar.BorderBrush>
+
             <Calendar.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFE4EAF0"/>
@@ -24,6 +28,9 @@
                     <GradientStop Color="#FFC3D654" Offset="1"/>
                 </LinearGradientBrush>
             </Calendar.Background>
+
         </Calendar>
+
     </Viewbox>
+
 </Window>
