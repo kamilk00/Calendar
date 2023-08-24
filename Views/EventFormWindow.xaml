@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Calendar"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:viewmodels="clr-namespace:Calendar.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:EventFormViewModel}"
         mc:Ignorable="d"
-        Title="Event Form" Height="450" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Calendar" Height="450" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         
         <StackPanel Margin="20">

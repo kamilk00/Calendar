@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calendar" xmlns:viewmodels="clr-namespace:Calendar.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:EventListViewModel}"
         mc:Ignorable="d"
-        Title="Event List" Height="500" Width="500" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+        Title="Calendar" Height="500" Width="500" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
 
     <Grid>
         
